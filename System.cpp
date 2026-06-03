@@ -6,7 +6,7 @@
 
 System::System() : nrOfBusiness(0), nrOfEconomy(0), nrOfAll(0) 
 {
-    // läser från fil bara en gång i början 
+    // lï¿½ser frï¿½n fil bara en gï¿½ng i bï¿½rjan 
     readFlightsFromFile();
     readBookingsFromFile();
     for (int i = 0; i < 10; ++i) {
@@ -49,6 +49,7 @@ void System::writeAllBookingsToFile() {
 
 void System::clearPassengers() {
     bookings.clear();
+    for (auto* p : passengers) delete p;
     passengers.clear();
 }
 
