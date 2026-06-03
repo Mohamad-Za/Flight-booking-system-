@@ -6,15 +6,7 @@ A console-based flight booking system written in C++, demonstrating object-orien
 
 The system manages flights, passengers, and bookings through a menu-driven interface. Passenger data and bookings are persisted to disk across sessions.
 
-```
-┌─────────────┐       ┌───────────┐       ┌──────────────────┐
-│   System    │ 1───* │  Booking  │ 1───1 │ Passenger (base) │
-│ (orchestr.) │       │           │       │ ┌──────────────┐ │
-│             │ 1───* │  Flight   │       │ │   Economy    │ │
-└─────────────┘       └───────────┘       │ │   Business   │ │
-                                          │ └──────────────┘ │
-                                          └──────────────────┘
-```
+![Class Diagram](period.drawio%20(1).png)
 
 **Key design patterns used:**
 - Polymorphism via abstract `Passenger` base class with `Economy` and `Business` subtypes
